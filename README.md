@@ -3,3 +3,15 @@
 1. 新增binarySearchTest用法
    1. 參考BinarySearchMain
    2. 實現Collections的BinarySearch預設用法
+## Map
+1. 新增testMap用法
+   1. 參考MapMain
+   2. 實現map的put、get、containsKey、replace、remove
+   3. keySet讀取key，values讀取value
+   4. LinkedHashMap與HashMap差異
+2. 新增testUnmodifiableMap用法
+   1. 參考MapMain
+   2. 實現map禁止修改的功能，一旦修改就會拋錯
+3. 新增testSafeMap用法
+   1. 參考MapMain
+   2. 實現Map封裝應用

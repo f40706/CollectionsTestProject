@@ -1,11 +1,18 @@
 package collections.binarysearch;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.*;
+import java.util.stream.Collector;
 
 public class Theater {
-    private final List<Seat> list = new ArrayList<>();
+    public final List<Seat> list = new ArrayList<>();
+    static Comparator<Seat> NUMBER_ORDER = new Comparator<Seat>() {
+        @Override
+        public int compare(Seat o1, Seat o2) {
+            return Integer.compare(o1.getNumber(), o2.getNumber());
+        }
+    };
 
     public Theater() {
         addAll();
@@ -40,4 +47,5 @@ public class Theater {
         c = (char) (c + index);
         return String.format("%c:%d", c, index);
     }
+
 }
