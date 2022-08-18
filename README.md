@@ -15,3 +15,13 @@
 3. 新增testSafeMap用法
    1. 參考MapMain
    2. 實現Map封裝應用
+## Set
+1. 新增testSet用法
+   1. 參考SetMain
+   2. 實現Set 相同資料被過濾
+2. 新增testSetHashCodeWithEqual用法
+   1. 參考SetMain
+   2. 利用HashCode和Equals過濾相同的指定資料
+3. 新增testSetAllAndRetain用法
+   1. 參考SetMain
+   2. 實現保留與過濾重複的數值以及containsAll使用

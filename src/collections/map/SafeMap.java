@@ -1,4 +1,4 @@
-package collections.binarysearch;
+package collections.map;
 
 import java.util.Collections;
 import java.util.HashMap;

@@ -1,9 +1,9 @@
 package collections.binarysearch;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.*;
-import java.util.stream.Collector;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class Theater {
     public final List<Seat> list = new ArrayList<>();

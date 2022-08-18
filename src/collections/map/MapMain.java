@@ -1,4 +1,4 @@
-package collections.binarysearch;
+package collections.map;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -33,7 +33,7 @@ public class MapMain {
         hashMap.put("key1", "234");
         SafeMap safeMap = new SafeMap(hashMap);
         Map<String, String> map = safeMap.getMap();
-        map.put("key3", "123");
+//        map.put("key3", "123");
         System.out.println(map);
     }
 
