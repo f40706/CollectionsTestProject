@@ -1,8 +1,10 @@
 package collections.Set;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
-public class SetItem2 {
+public class SetItem2 implements Comparable<SetItem2> {
     private final String tag;
 
     public SetItem2(String tag) {
@@ -26,5 +28,11 @@ public class SetItem2 {
     @Override
     public int hashCode() {
         return Objects.hash(tag);
+    }
+
+    @Override
+    public int compareTo(@NotNull SetItem2 o) {
+        if(this == o) return 0;
+        return this.tag.compareTo(o.tag);
     }
 }

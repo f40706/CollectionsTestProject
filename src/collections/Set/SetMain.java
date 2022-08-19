@@ -9,11 +9,26 @@ public class SetMain {
      * testSet: 實現Set 相同資料被過濾
      * testSetHashCodeWithEqual: 利用HashCode和Equals過濾相同的指定資料
      * testSetAllAndRetain: 實現保留與過濾重複的數值以及containsAll使用
+     * testComparable: 實現指定參數做compareTo比較
      * */
     public static void main(String[] args) {
 //        testSet();
-        testSetHashCodeWithEqual();
-        testSetAllAndRetain();
+//        testSetHashCodeWithEqual();
+//        testSetAllAndRetain();
+        testComparable();
+    }
+
+    private static void testComparable() {
+        Set<SetItem2> set = new HashSet<>();
+        set.add(new SetItem2("123"));
+        Set<SetItem2> set2 = new HashSet<>();
+        set2.add(new SetItem2("123"));
+
+        for(SetItem2 item: set) {
+            for(SetItem2 item2: set2) {
+                System.out.println(item.compareTo(item2));
+            }
+        }
     }
 
     private static void testSetAllAndRetain() {

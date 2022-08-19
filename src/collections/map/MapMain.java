@@ -4,26 +4,24 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MapMain {
 
     /**
      * testMap: 實現map的put、get、containsKey、replace、remove
      * keySet讀取key，values讀取value
-     * 及LinkedHashMap與HashMap差異
+     * 及LinkedHashMap與HashMap與TreeMap差異
      * testUnmodifiableMap: 實現map禁止修改的功能，一旦修改就會拋錯
-     * testSafeMap: 實現Map封裝應用
+     * testSafeMapAndMapEntry: 實現Map封裝應用，與MapEntry的使用
      */
     public static void main(String[] args) {
-//        testMap();
+        testMap();
 //        System.out.println(testUnmodifiableMap());
-        testSafeMap();
+//        testSafeMapAndMapEntry();
     }
 
-    private static void testSafeMap() {
+    private static void testSafeMapAndMapEntry() {
         //進入SafeMap封裝前，可以修改，新增
         //進入後，會clone
         //由SafeMap讀取得map禁止修改
@@ -35,12 +33,17 @@ public class MapMain {
         Map<String, String> map = safeMap.getMap();
 //        map.put("key3", "123");
         System.out.println(map);
+
+        for(Map.Entry<String, String> mapEntry: map.entrySet()) {
+            System.out.println(mapEntry.getKey() + ", " +mapEntry.getValue());
+        }
     }
 
     private static void testMap() {
         //LinkedHashMap: 按輸入排序
+        //TreeMap: 按大小排序
         //HashMap: 不會排序
-        Map<String, String> map = new HashMap<>();
+        Map<String, String> map = new TreeMap<>();
         map.put("data2", "234");
         map.put("data1", "123");
         map.put("data3", "345");
